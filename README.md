@@ -1,27 +1,30 @@
 # Solarized Theme for Ghostty
 
-Precision color scheme for Ghostty terminal emulator, based on [Solarized](https://ethanschoonover.com/solarized/) by Ethan Schoonover.
+Precision color scheme for [Ghostty](https://ghostty.org) terminal emulator, based on [Solarized](https://ethanschoonover.com/solarized/) by Ethan Schoonover.
 
-## Themes
+## Screenshots
 
-- **solarized-dark** - Dark background with light text
-- **solarized-light** - Light background with dark text
+### Solarized Dark
+
+![Solarized Dark](screenshots/solarized-dark.png)
+
+### Solarized Light
+
+![Solarized Light](screenshots/solarized-light.png)
 
 ## Installation
 
 ### Option 1: Copy to themes directory
-
-Copy the theme files to your Ghostty themes directory:
 
 ```bash
 # Create themes directory if it doesn't exist
 mkdir -p ~/.config/ghostty/themes
 
 # Copy theme files
-cp solarized-dark solarized-light ~/.config/ghostty/themes/
+cp themes/solarized-dark themes/solarized-light ~/.config/ghostty/themes/
 ```
 
-Then use in your Ghostty config (`~/.config/ghostty/config`):
+Then add to your Ghostty config (`~/.config/ghostty/config`):
 
 ```
 theme = solarized-dark
@@ -35,15 +38,33 @@ theme = dark:solarized-dark,light:solarized-light
 
 ### Option 2: Use absolute path
 
-Reference the theme file directly with an absolute path:
+Reference the theme file directly:
 
 ```
-theme = /path/to/solarized-dark
+theme = /path/to/ghostty-solarized/themes/solarized-dark
 ```
 
-### Option 3: Include in config
+## Demo
 
-You can also copy the contents directly into your Ghostty config file.
+Run the demo script to preview the color palette:
+
+```bash
+./demo.sh
+```
+
+## Repository Structure
+
+```
+ghostty-solarized/
+├── themes/
+│   ├── solarized-dark     # Dark background theme
+│   └── solarized-light    # Light background theme
+├── screenshots/
+│   ├── solarized-dark.png
+│   └── solarized-light.png
+├── demo.sh                # Color palette demo script
+└── README.md
+```
 
 ## Color Palette
 
